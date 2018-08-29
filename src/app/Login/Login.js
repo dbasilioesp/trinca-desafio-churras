@@ -4,7 +4,7 @@ class Login extends Component {
   render() {
     return (
       <div id="section-login">
-        <form>
+        <form action="/list">
           <div className="form-input">
             <label for="email">Login</label>
             <input id="email" type="email" placeholder="email" />
