@@ -1,0 +1,11 @@
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 120px;
+
+  .logo {
+    position: absolute;
+    bottom: 28px;
+  }
+}

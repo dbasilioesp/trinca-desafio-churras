@@ -44,3 +44,9 @@ button {
   border: none;
   padding: 0 $font-large-2;
 }
+
+.grid {
+  display: grid;
+  grid-template-rows: [header-main] 1fr [footer] auto;
+  height: 100%;
+}
