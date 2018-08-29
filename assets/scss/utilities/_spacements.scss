@@ -1,0 +1,54 @@
+// Container
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+}
+
+.container-small {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+// Flex
+
+.justify-content-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+// Margins
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mr-0 {
+  margin-right: 0;
+}
+
+.ml-0 {
+  margin-left: 0;
+}
+
+@for $i from 1 through length($dimensions) {
+  .mt-#{$i} {
+    margin-top: nth($dimensions, $i);
+  }
+
+  .mb-#{$i} {
+    margin-bottom: nth($dimensions, $i);
+  }
+
+  .mr-#{$i} {
+    margin-right: nth($dimensions, $i);
+  }
+
+  .ml-#{$i} {
+    margin-left: nth($dimensions, $i);
+  }
+}

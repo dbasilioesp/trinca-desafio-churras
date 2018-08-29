@@ -1,0 +1,33 @@
+.header-login {
+  // background
+  background-image: url("../images/layout/bbq-pattern.png");
+
+  // position
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  // push up
+  margin-bottom: -120px;
+
+  .title {
+    margin: 70px 0 220px;
+  }
+
+  // Haze effect
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 124px;
+    background: linear-gradient(0deg, #FFD836 0%, rgba(255, 216, 54, 0) 100%);
+  }
+
+  // next section will not be faded by haze effect
+  & + * {
+    position: relative;
+    z-index: 1;
+  }
+}

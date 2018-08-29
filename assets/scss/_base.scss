@@ -1,0 +1,46 @@
+html, body {
+  height: 100%;
+  font-weight: 500;
+}
+
+body {
+  margin: 0;
+  font-family: $font-text;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: black;
+  text-align: left;
+  background-color: #fff;
+}
+
+a, p, label {
+  font-size: $font-medium-1;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+  @extend .font-primary;
+
+  font-weight: 800;
+}
+
+h1 {
+  @extend .font-large-1;
+}
+
+button {
+  background-color: black;
+  border-radius: 18px;
+  height: 100%;
+  min-height: 50px;
+  color: white;
+  font-size: $font-medium-1;
+  font-weight: bold;
+  border: none;
+  padding: 0 $font-large-2;
+}
