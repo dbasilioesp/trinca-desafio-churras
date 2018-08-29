@@ -15,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "file-loader": "^2.0.0",
     "script-loader": "^0.7.2"
   },
   "dependencies": {

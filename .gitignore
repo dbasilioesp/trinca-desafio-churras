@@ -25,3 +25,9 @@ yarn-error.log*
 
 # webhint
 hint-report/http-localhost-8080/config/
+
+# build
+build/
+
+# app
+src/**/*.css
