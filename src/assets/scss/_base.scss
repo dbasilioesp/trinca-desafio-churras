@@ -11,10 +11,10 @@ body {
   line-height: 1.4;
   color: black;
   text-align: left;
-  background-color: #fff;
+  background-color: #FAFAFA;
 }
 
-a, p, label {
+a, p, label, div {
   font-size: $font-medium-1;
 }
 
@@ -43,10 +43,4 @@ button {
   font-weight: bold;
   border: none;
   padding: 0 $font-large-2;
-}
-
-.grid {
-  display: grid;
-  grid-template-rows: [header-main] 1fr [footer] auto;
-  height: 100%;
 }

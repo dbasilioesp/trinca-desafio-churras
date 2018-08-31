@@ -1,0 +1,21 @@
+.card-item {
+  background: white;
+  padding: 21px 24px;
+  cursor: pointer;
+
+  .card-title {
+    margin-bottom: 3rem;
+  }
+
+  .card-details {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card-detail {
+    .icon {
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+  }
+}

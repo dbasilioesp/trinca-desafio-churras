@@ -1,0 +1,32 @@
+@import "../../../assets/scss/variables";
+
+.card-add-item {
+  // background
+  background: #F1F1F1;
+
+  // flex
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .border-icon {
+    // style
+    background-color: $color-primary;
+    border-radius: 50%;
+
+    // size
+    width: 90px;
+    height: 90px;
+
+    // flex
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+
+    .icon {
+      margin-left: -4px;
+    }
+  }
+}

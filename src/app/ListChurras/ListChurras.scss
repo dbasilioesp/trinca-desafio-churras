@@ -1,0 +1,8 @@
+.grid-churras {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 282px);
+  grid-template-rows: 192px;
+  grid-auto-rows: 192px;
+  justify-content: center;
+  grid-gap: 24px;
+}

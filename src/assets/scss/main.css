@@ -10,9 +10,9 @@ body {
   line-height: 1.4;
   color: black;
   text-align: left;
-  background-color: #fff; }
+  background-color: #FAFAFA; }
 
-a, p, label {
+a, p, label, div {
   font-size: 1.125rem; }
 
 a {
@@ -32,11 +32,6 @@ button {
   font-weight: bold;
   border: none;
   padding: 0 2.25rem; }
-
-.grid {
-  display: grid;
-  grid-template-rows: [header-main] 1fr [footer] auto;
-  height: 100%; }
 
 .form-input {
   margin-bottom: 2.2rem; }
@@ -61,11 +56,41 @@ button {
   width: 48px;
   height: 48px; }
 
+.money-icon {
+  background-image: url("../images/layout/icon_money.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  width: 20px;
+  height: 25px; }
+
+.people-icon {
+  background-image: url("../images/layout/icon_people.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  width: 20px;
+  height: 25px; }
+
+.churras-icon {
+  background-image: url("../images/layout/icon_bbq.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  width: 40px;
+  height: 44px; }
+
 .bg-primary {
   background-color: #FFD836; }
 
+.bg-white {
+  background-color: white; }
+
 .w-100-per {
   width: 100%; }
+
+.h-100-per {
+  height: 100%; }
 
 .container {
   width: 100%;
@@ -73,7 +98,13 @@ button {
 
 .container-small {
   max-width: 300px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 100%; }
+
+.container-medium {
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%; }
 
 .justify-content-center {
   display: flex;
@@ -161,6 +192,12 @@ button {
 .font-medium-1 {
   font-size: 1.125rem; }
 
+.font-medium-2 {
+  font-size: 1.3125rem; }
+
+.font-medium-3 {
+  font-size: 1.75rem; }
+
 .font-large-1, h1 {
   font-size: 2rem; }
 
@@ -169,6 +206,14 @@ button {
 
 .light-weight {
   font-weight: 300; }
+
+.bold-weight {
+  font-weight: 700; }
+
+.text-mark-1 {
+  font-weight: 800;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem; }
 
 .text-white {
   color: white; }
