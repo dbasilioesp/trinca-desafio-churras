@@ -2,6 +2,8 @@ import moment from 'moment';
 import React, { Component } from 'react';
 import churrasList from '../../assets/fixtures/churras';
 import './DetailChurras.css';
+import { TweenMax } from 'gsap/src/uncompressed/TweenMax';
+
 import IconText from '../IconText/IconText';
 import Partner from './Partner/Partner';
 
@@ -17,16 +19,23 @@ class DetailChurras extends Component {
     }
   }
 
+  componentDidMount() {
+    const container = document.querySelector('#detail-churras-wrap');
+    TweenMax.from(container, 1.2, { scale: 0, ease: 'Back.easeOut' });
+  }
+
   render() {
     let { item } = this.state;
     const date = moment(item.date).format('DD[/]MM');
     let total = item.partners.reduce((total, currentItem) => total + currentItem.value, 0);
     total = 'R$' + total;
 
-    const partnersList = item.partners.map((partner) => <Partner partner={partner} />);
+    const partnersList = item.partners.map((partner, index) =>
+      <Partner partner={partner} key={index} />
+    );
 
     return (
-      <div className="container-medium bg-white">
+      <div id='detail-churras-wrap' className="container-medium bg-white">
         <div className="detail-churras">
           <div className="detail-header">
             <div>

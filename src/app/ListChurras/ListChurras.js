@@ -6,12 +6,20 @@ import './ListChurras.css';
 import CardItem from './CardItem/CardItem';
 import CardAddItem from './CardAddItem/CardAddItem';
 
+import { TweenMax } from 'gsap/src/uncompressed/TweenMax';
+
 
 class ListChurras extends Component {
+
+  componentDidMount() {
+    const cards = document.querySelectorAll('.grid-churras > *');
+    TweenMax.staggerFrom(cards, 0.8, { scale: 0, ease: 'Back.easeOut' }, 0.2);
+  }
+
   render() {
 
-    const cardList = churrasList.map((item) =>
-      <CardItem item={item} key={item.id} />
+    const cardList = churrasList.map((item, index) =>
+      <CardItem item={item} key={index} />
     );
 
     return (

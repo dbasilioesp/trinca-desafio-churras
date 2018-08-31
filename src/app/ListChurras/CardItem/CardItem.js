@@ -1,9 +1,25 @@
 import moment from 'moment';
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import './CardItem.css';
+import { TweenMax } from 'gsap/src/uncompressed/TweenMax';
 
 class CardItem extends Component {
+  constructor(props) {
+    super(props);
+    this.goToDetail = this.goToDetail.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  goToDetail() {
+    const { item, history } = this.props;
+    history.push('/churras/detail/' + item.id);
+  }
+
+  handleClick(event) {
+    const cards = document.querySelectorAll('.grid-churras > *');
+    TweenMax.staggerTo(cards, 0.8, { scale: 0, ease: 'Back.easeIn' }, 0.2, this.goToDetail);
+  }
 
   render() {
     const { item } = this.props;
@@ -12,26 +28,25 @@ class CardItem extends Component {
     total = 'R$' + total;
 
     return (
-      <Link to={'/churras/detail/' + item.id}>
-        <div className="card-item">
-          <div className="card-date text-mark-1">{date}</div>
-          <div className="card-title font-medium-2">
-            <strong>{item.title}</strong>
+
+      <div className="card-item" onClick={this.handleClick}>
+        <div className="card-date text-mark-1">{date}</div>
+        <div className="card-title font-medium-2">
+          <strong>{item.title}</strong>
+        </div>
+        <div className="card-details">
+          <div className="card-detail">
+            <span className="icon people-icon"></span>
+            <span className="font-medium-2">{item.partners.length}</span>
           </div>
-          <div className="card-details">
-            <div className="card-detail">
-              <span className="icon people-icon"></span>
-              <span className="font-medium-2">{item.partners.length}</span>
-            </div>
-            <div className="card-detail">
-              <span className="icon money-icon"></span>
-              <span className="font-medium-2">{total}</span>
-            </div>
+          <div className="card-detail">
+            <span className="icon money-icon"></span>
+            <span className="font-medium-2">{total}</span>
           </div>
         </div>
-      </Link>
+      </div>
     );
   }
 }
 
-export default CardItem;
+export default withRouter(CardItem);
